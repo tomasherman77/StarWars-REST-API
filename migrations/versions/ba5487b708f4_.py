@@ -74,4 +74,5 @@ def downgrade():
     mysql_default_charset='utf8mb4',
     mysql_engine='InnoDB'
     )
+   
     # ### end Alembic commands ###
