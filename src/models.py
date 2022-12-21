@@ -29,8 +29,9 @@ class User(db.Model):
 class Favourite(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    people_id = db.Column(db.Integer, db.ForeignKey('people.id'))
     planet_id = db.Column(db.Integer, db.ForeignKey('planet.id'))
+    people_id = db.Column(db.Integer, db.ForeignKey('people.id'))
+    
 
     user = db.relationship('User', backref='users')
     people = db.relationship('People', backref='users')
